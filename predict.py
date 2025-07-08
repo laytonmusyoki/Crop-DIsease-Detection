@@ -44,6 +44,8 @@ try:
     image = preprocess_image(image_path)
     prediction = model.predict(image)
     predicted_class = class_names[np.argmax(prediction)]
+    print("Predicted index:", np.argmax(prediction))
+
 
     print(f"Predicted disease class: {predicted_class}")
 except Exception as e:
